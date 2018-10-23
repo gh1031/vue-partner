@@ -1,6 +1,6 @@
 {
   "name": "vue-partner",
-  "version": "0.0.1-beta3",
+  "version": "0.0.1-beta4",
   "main": "src/packages/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
