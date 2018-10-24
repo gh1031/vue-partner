@@ -8023,14 +8023,15 @@ vue-loader@^15.4.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-partner@^0.0.1-beta2:
-  version "0.0.1-beta2"
-  resolved "https://registry.yarnpkg.com/vue-partner/-/vue-partner-0.0.1-beta2.tgz#7cc1bfc38e9ce909aecebd264226494986c017ca"
-  integrity sha512-gukg7O45RCUkQYv760/1bC+TXzbxTCxz566aFVZw2hITvlJqFgZ/M+qn67NHKtyMgr+WWDfnmLQD6ouqCLgNkA==
+vue-partner@^0.0.1-beta2, vue-partner@^0.0.1-beta5:
+  version "0.0.1-beta5"
+  resolved "https://registry.yarnpkg.com/vue-partner/-/vue-partner-0.0.1-beta5.tgz#6f022893e281c83a387f94c7e3458692b068ee9f"
+  integrity sha512-dC4IycWbtaQEiyzkyaJhohiZ90fCSR8yN1bLs/lTBg8Hh0UsUZEpHNgIVbrZvO354HkLDBgqwbNIV+PIY1Q/EQ==
   dependencies:
     node-sass "^4.9.4"
     sass-loader "^7.1.0"
     vue "^2.5.17"
+    vue-partner "^0.0.1-beta2"
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
