@@ -1,13 +1,110 @@
+@import './reset.scss';
+@import './variables.scss';
+@import url(//at.alicdn.com/t/font_887935_q485s2dwbaa.css);
+
 .p-button {
-  outline: 0;
-  padding: 4px 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: $grey6;
+  border-color: $grey6;
+
+  &:hover{
+    background-color: $grey5;
+  }
+  /* loading */
+  &.is-loading {
+    background-color: $grey6;
+    border-color: $grey6;
+
+    &:hover {
+      background-color: $grey6;
+      border-color: $grey6;
+    }
+  }
+
+  [class*=icon-] {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  [class*=icon-loading] {
+    animation: rotating infinite 2s linear;
+  }
+  [class*=icon-] + span {
+    display: inline;
+    line-height: 1;
+    margin-left: 5px;
+  }
+}
+
+.p-button--default {
   border-radius: 4px;
-  color: #fff;
-  font-weight: 400;
-  border-color: #f5222d;
-  background-color: #f5222d;
+  padding: 8px 16px;
+  line-height: 1;
+}
+
+.p-button--small {
+  border-radius: 4px;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.p-button--large {
+  border-radius: 4px;
+  padding: 16px 24px;
+  line-height: 1;
+}
+
+.p-button--primary {
+  color: #fafafa;
+  background-color: $blue6;
+  border-color: $blue6;
   &:hover {
-    border-color: #ff4d4f;
-    background-color: #ff4d4f;
+    background-color: $blue5;
+  }
+}
+
+.p-button--success {
+  color: #fafafa;
+  background-color: $green6;
+  border-color: $green6;
+  &:hover {
+    background-color: $green5;
+  }
+}
+
+.p-button--error {
+  color: #fafafa;
+  background-color: $red6;
+  border-color: $red6;
+  &:hover {
+    background-color: $red5;
+  }
+}
+
+.p-button--warn {
+  color: #fafafa;
+  background-color: $orange6;
+  border-color: $orange6;
+  &:hover {
+    background-color: $orange5;
+  }
+}
+
+.p-button--magenta {
+  background-color: $magenta6;
+  border-color: $magenta6;
+
+  &:hover {
+    background-color: $magenta5;
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }

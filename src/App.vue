@@ -1,27 +1,70 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header></header>
+    <section class="content">
+      <aside>
+        <ul>
+          <li><router-link to="/p-button">Button</router-link></li>
+          <li><router-link to="/p-message">Message</router-link></li>
+        </ul>
+      </aside>
+      <section>
+        <router-view></router-view>
+      </section>
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld,
-  },
+  name: "app"
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: url(./assets/bg.jpeg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  header {
+    width: 100%;
+    height: 48px;
+    background-color: #262626;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    aside {
+      width: 200px;
+      height: 100%;
+      background-color: #262626;
+
+      li {
+        border-color: #595959;
+        background-color: #595959;
+        text-align: center;
+        font-weight: bold;
+        line-height: 48px;
+        margin-bottom: 4px;
+
+        > a {
+          color: #FFF;
+          display: block
+        }
+
+        &:hover {
+          background-color: #8c8c8c;
+          border-color: #8c8c8c;
+        }
+      }
+    }
+
+    > section {
+    }
+  }
 }
 </style>
