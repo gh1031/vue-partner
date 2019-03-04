@@ -1,8 +1,10 @@
 <template>
-  <div class="p-message"></div>
+  <div>
+  </div>
 </template>
 
 <script>
+
 export default {
   name: 'p-message',
 }

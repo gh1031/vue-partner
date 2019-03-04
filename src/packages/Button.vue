@@ -1,3 +1,12 @@
+<!--
+  @name button
+  @params 
+    * type 按钮类型  可选值: parmary/warn/error/success/magenta/default  默认: defalut
+    * size 按钮尺寸  可选值: small/default/large
+    * icon 按钮icon 
+    * loading 转菊花
+    * click 点击事件
+-->
 <template>
   <button
     class="p-button"
@@ -8,7 +17,7 @@
         'is-loading': loading,
       }
     ]"
-    :disabled="loading"
+    :disabled="loading || disabled"
     @click="handleClick"
   >
     <i class="iconfont" :class="loading && 'icon-loading'"></i>
@@ -37,21 +46,19 @@ export default {
     loading: {
       type: Boolean,
       default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
 
   methods: {
     handleClick(evt) {
-      console.log(evt,'evt')
-      console.log(this, 'this')
-      this.$emit('click', evt)
-    },
-    handleMouseOver(evt) {
-      this.$emit('mouseover', evt)
+      this.$emit('click', evt);
     }
   },
   mounted() {
-    console.log(this)
     
   },
 };
